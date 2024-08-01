@@ -9,3 +9,4 @@ print(output)
 # the input values can be either just values or the layer
 # the weights are given for the synopsys
 # the bias is given for the neuron
+# we are going to use 4 inputs and 3 neurons, that means there are going to be 3 unique weight sets, and each weight set is going to have 4 unique values
