@@ -34,4 +34,7 @@ print(layer_outputs)
 # NOTES: weights and biases are used to tune the outcome 
 
 # the concept of SHAPE
-# shape is basically at each dimension, what's the size of that dimension
+# shape is basically at each dimension, what's the size of 
+# that dimension, suppose we have got a list of 4 elements : 
+# list : [1,5,6,2] ; shape is (4,) ; type : 1Darray, vector
+# list of list --> 2Darray, matrix
