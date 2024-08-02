@@ -9,3 +9,7 @@ weights = [[0.2,0.8,-0.5,1.0],
 biases = [2,3,0.5]
 output = np.dot(weights,inputs) + biases
 print(output)
+
+
+# if we use np.dot(inputs, weights) --> error
+# adjusting weights and biases can give us completely different
