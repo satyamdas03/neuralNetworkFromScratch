@@ -38,3 +38,5 @@ print(layer_outputs)
 # that dimension, suppose we have got a list of 4 elements : 
 # list : [1,5,6,2] ; shape is (4,) ; type : 1Darray, vector
 # list of list --> 2Darray, matrix
+# tensor is an object that can be represented as an object that can be represented as an array
+# we want to multiply the weights and inputs
