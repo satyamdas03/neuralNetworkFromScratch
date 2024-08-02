@@ -13,4 +13,4 @@ print(output)
 
 # if we use np.dot(inputs, weights) --> error
 # adjusting weights and biases can give us completely different
-###
+### checking if changes are being made
