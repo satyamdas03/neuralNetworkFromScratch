@@ -31,3 +31,7 @@ print(layer_outputs)
     #--shape
     #--dot product
 
+# NOTES: weights and biases are used to tune the outcome 
+
+# the concept of SHAPE
+# shape is basically at each dimension, what's the size of that dimension
