@@ -207,5 +207,20 @@ print(layer2_outputs)
 now we are convert all these to objects
 converting the object of layers to objects
 
+import numpy as np
+np.random.seed(0)
+X = [[1,2,3,2.5],
+    [2.0,5.0,-1.0,2.0],
+    [-1.5,2.7,3.3,-0.8]
+          ] #--> features from a single sample
+
+#gonna use oops
+class Layer_Dense:
+    def __init__(self, n_inputs, n_neurons):
+        self.weights = 0.10*np.random.randn(n_inputs, n_neurons) # we are gonna pass the shape inside this paranthesis, we need to know kind of 2 things, whats the size of the input coming in and how many neurons are we gonna have
+        self.biases = np.zeros((1, n_neurons)) #since the biases is a 1d array of the number of neurons
+    def forward(self):
+        pass
+# in the case of neural networks there are some ways we are gonna initialise a layer, first is we are gonna have to train the model that we have saved and we want to load in that model 
 
 

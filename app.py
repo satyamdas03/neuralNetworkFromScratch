@@ -41,7 +41,7 @@ X = [[1,2,3,2.5],
 class Layer_Dense:
     def __init__(self, n_inputs, n_neurons):
         self.weights = 0.10*np.random.randn(n_inputs, n_neurons) # we are gonna pass the shape inside this paranthesis, we need to know kind of 2 things, whats the size of the input coming in and how many neurons are we gonna have
-        self.biases = np.zeros(1, n_neurons)
+        self.biases = np.zeros((1, n_neurons)) #since the biases is a 1d array of the number of neurons
     def forward(self):
         pass
 # in the case of neural networks there are some ways we are gonna initialise a layer, first is we are gonna have to train the model that we have saved and we want to load in that model 
