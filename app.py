@@ -26,6 +26,13 @@ print(layer2_outputs)
 # adjusting weights and biases can give us completely different and they are associated with individual neurons
 
 #the layer1_output is the output for layer 1 which is then the input of layer2
+# hidden layers are called so because, we as programmers are not really in charge of how that layer changes
 
+## coding up the above code, converting the layers into objects
 
+import numpy as np
+X = [[1,2,3,2.5],
+    [2.0,5.0,-1.0,2.0],
+    [-1.5,2.7,3.3,-0.8]
+          ] #--> features from a single sample
 

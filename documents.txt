@@ -202,5 +202,10 @@ print(layer2_outputs)
 
 #the layer1_output is the output for layer 1 which is then the input of layer2
 
+===================================================
+
+now we are convert all these to objects
+converting the object of layers to objects
+
 
 
