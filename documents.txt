@@ -217,10 +217,20 @@ X = [[1,2,3,2.5],
 #gonna use oops
 class Layer_Dense:
     def __init__(self, n_inputs, n_neurons):
-        self.weights = 0.10*np.random.randn(n_inputs, n_neurons) # we are gonna pass the shape inside this paranthesis, we need to know kind of 2 things, whats the size of the input coming in and how many neurons are we gonna have
+        self.weights = 0.10*np.random.randn(n_inputs, n_neurons) # we are gonna pass the shape inside this parenthesis, we need to know kind of 2 things, whats the size of the input coming in and how many neurons are we gonna have
         self.biases = np.zeros((1, n_neurons)) #since the biases is a 1d array of the number of neurons
-    def forward(self):
-        pass
+    def forward(self, inputs):
+        self.output = np.dot(inputs, self.weights)+self.biases
 # in the case of neural networks there are some ways we are gonna initialise a layer, first is we are gonna have to train the model that we have saved and we want to load in that model 
+# the output of the first layer is the input of the second layer
+layer1 = Layer_Dense(4,5) #4--> input size ; 5 is the random value
+layer2 = Layer_Dense(5,2) #5--> output of one layer is input of another
+layer1.forward(X)
+print(layer1.output)
+layer2.forward(layer1.output)
+print(layer2.output)
+
+======================================================
+
 
 
