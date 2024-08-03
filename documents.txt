@@ -145,6 +145,7 @@ print(output)
 since here the inputs matrix has 3rows and 4cols, the weights matrix has 4rows and 3 cols, there the dot product will give us an error.
 
 ========================================================
+-->TO ADD FROM HERE
 
 to fix the error we are going to use the transpose method
 we are going to transpose the weight array, using the numpy method. So first we are going to convert the weights array to numpy array and then use .T to make it into a transpose
@@ -168,3 +169,6 @@ print(output)
 # if we use np.dot(inputs, weights) --> error
 # adjusting weights and biases can give us completely different and they are associated with individual neurons
 
+===========================================================
+
+we are going to add the new layer
