@@ -36,11 +36,10 @@ class Activation_ReLU:
 
 # in the case of neural networks there are some ways we are gonna initialise a layer, first is we are gonna have to train the model that we have saved and we want to load in that model 
 # the output of the first layer is the input of the second layer
-layer1 = Layer_Dense(4,5) #4--> input size ; 5 is the random value
-layer2 = Layer_Dense(5,2) #5--> output of one layer is input of another
+layer1 = Layer_Dense(4,5) #4--> input size ; 5 is the number of neurons
+activation1 = Activation_ReLU()
+
 layer1.forward(X)
 print(layer1.output)
-layer2.forward(layer1.output)
-print(layer2.output)
 
 
