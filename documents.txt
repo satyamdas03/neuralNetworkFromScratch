@@ -241,7 +241,7 @@ Will be coding up an activation function, can be using a varity of functions the
     --next type of function is the rectifier function, which states that if x>0 --> y==x else y==0, better than sigmoid function
 
     ## why does the rectifier function work as an activation function==> watch the source again
-
+    ## gonna use the nnfs package to install that --> pip install nnfs
 
 
 
