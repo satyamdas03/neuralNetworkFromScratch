@@ -32,3 +32,4 @@ activation1.forward(layer1.output)
 #print(layer1.output)
 activation1.forward(layer1.output)
 print(activation1.output)
+## PART 5 IS DONE
