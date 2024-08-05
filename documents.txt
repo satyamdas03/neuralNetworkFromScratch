@@ -232,5 +232,16 @@ print(layer2.output)
 
 ======================================================
 
+Will be coding up an activation function, can be using a varity of functions the are examples that can be used, 
+    -- step function == if x>0 , y==1 else y==0
+    -- we will be using the step function as an activation function
+    -- working principle :
+        each neuron in the hidden layer and the output layer will have this activation function and this comes into play when we are using the inputs, the weights and the bias, when we tweak the weights and biases, the activation function will always give values between 0 and 1
+    -- next type of function is the sigmoid function, the basic reason of using a sigmoid function, is that it gives us a more granular output, which tells us what is the impact of the weights and the biases on the activation function
+    --next type of function is the rectifier function, which states that if x>0 --> y==x else y==0, better than sigmoid function
+
+    ## why does the rectifier function work as an activation function==> watch the source again
+
+
 
 
