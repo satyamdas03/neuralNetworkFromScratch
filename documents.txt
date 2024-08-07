@@ -280,3 +280,11 @@ print(activation1.output)
 ## PART 5 IS DONE
 
 
+==================================================
+#coding up the softmax function
+
+steps:
+1) exponatiating every output value of the output layer
+2) then normalizing the exponatiated values
+
+

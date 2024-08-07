@@ -32,5 +32,22 @@ activation1.forward(layer1.output)
 #print(layer1.output)
 activation1.forward(layer1.output)
 print(activation1.output)
-## PART 5 IS DONE
 ## GONNA HAVE TO UPDATE THE README FILE
+
+#coding up the softmax function(following the steps inside the documents.txt)
+
+## this part is the exponatiating part
+import math
+layer_outputs = [4.8,1.21,2.385]
+E = math.e
+exp_values = []
+for output in layer_outputs:
+    exp_values.append(E**output)
+print(exp_values)
+
+## next we will be normalizing the exponitiated values
+norm_base = sum(exp_values)
+norm_values = []
+for value in exp_values:
+    norm_values.append(value/norm_base)
+print(norm_values)
