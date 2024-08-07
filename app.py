@@ -4,8 +4,6 @@ from nnfs.datasets import spiral_data
 
 nnfs.init()  # Setting up a default datatype for the numpy use
 
-X, y = spiral_data(100, 3)  # 100 feature sets of 3 classes
-
 # Define the Layer_Dense class
 class Layer_Dense:
     def __init__(self, n_inputs, n_neurons):
@@ -20,30 +18,24 @@ class Activation_ReLU:
     def forward(self, inputs):
         self.output = np.maximum(0, inputs)
 
-# Initialize the layers
-layer1 = Layer_Dense(2, 5)  # 2 input features (matches the dataset), 5 neurons
+class Activation_Softmax:
+    def forward(self, inputs):
+        exp_values = np.exp(inputs-np.max(inputs,axis=1,keepdims=True)) #avoiding overflow since we are using the exponential function
+        probabilities = exp_values/np.sum(exp_values,axis=1,keepdims=True)
+        self.output = probabilities
+
+X,y = spiral_data(samples=100,classes=3)
+dense1 = Layer_Dense(2,3)
 activation1 = Activation_ReLU()
 
-# Perform a forward pass
-layer1.forward(X)
-activation1.forward(layer1.output)
+dense2 = Layer_Dense(3,3)
+activation2 = Activation_Softmax()
 
-# Print the output of the first layer
-#print(layer1.output)
-activation1.forward(layer1.output)
-print(activation1.output)
+dense1.forward(X)
+activation1.forward(dense1.output)
+
+dense2.forward(activation1.output)
+activation2.forward(dense2.output)
+
+print(activation2.output[:5])
 ## GONNA HAVE TO UPDATE THE README FILE
-
-#coding up the softmax function(following the steps inside the documents.txt)
-
-import numpy as np
-import nnfs
-nnfs.init()
-layer_outputs = [[4.8,1.21,2.385],
-                 [8.9, -1.81, 0.2],
-                 [1.41, 1.051, 0.026]]
-exp_values = np.exp(layer_outputs)
-norm_values = exp_values/np.sum(exp_values, axis=1,keepdims=True) 
-##np.sum(exp_values, axis=1, keepdims=True) 
-##axis=1 --> for row wise sums, keepdims=True --> for printing the sums output in the layer_outputs shape
-print(norm_values)
