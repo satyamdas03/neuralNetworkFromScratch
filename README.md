@@ -66,7 +66,7 @@ By doing this project I am aiming to construct a neural network from scratch by 
   print(output)
   ```
 
-  ### Version 4: Using The Transpose Method
+### Version 4: Using The Transpose Method
 
 - **Improvement**: to fix the error we are going to use the transpose method
 we are going to transpose the weight array, using the numpy method. So first we are going to convert the weights array to numpy array and then use .T to make it into a transpose. Using numpy to make the calculations. Using numpy will eliminate the use of for loops
@@ -85,7 +85,7 @@ we are going to transpose the weight array, using the numpy method. So first we 
   print(output)
   ```
 
-  ### Version 5: Adding a New Layer
+### Version 5: Adding a New Layer
 
 - **Code**:
   ```python
