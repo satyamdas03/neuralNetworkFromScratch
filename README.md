@@ -192,8 +192,8 @@ we are going to transpose the weight array, using the numpy method. So first we 
   ```
 
   ### Version 8: Broader Aspects of the steps to code up the softmax function
-  - **exponatiating every output value of the output layer*
-  - **then normalizing the exponatiated values*
+  - *exponatiating every output value of the output layer*
+  - *then normalizing the exponatiated values*
   - **Without using numpy**
     ```python
       import math
